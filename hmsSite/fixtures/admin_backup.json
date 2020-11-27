@@ -1,0 +1,930 @@
+[
+    {
+        "model": "hmsSite.school",
+        "pk": 1,
+        "fields": {
+            "name": "School of Population and Global Health"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 2,
+        "fields": {
+            "name": "Dental School"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 3,
+        "fields": {
+            "name": "School of Allied Health"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 4,
+        "fields": {
+            "name": "School of Biomedical Sciences"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 5,
+        "fields": {
+            "name": "School of Human Sciences"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 6,
+        "fields": {
+            "name": "School of Earth Sciences"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 7,
+        "fields": {
+            "name": "School of Biological Sciences"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 8,
+        "fields": {
+            "name": "School of Physics, Mathematics and Computing"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 9,
+        "fields": {
+            "name": "School of Engineering"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 10,
+        "fields": {
+            "name": "Law School"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 11,
+        "fields": {
+            "name": "School of Design"
+        }
+    },
+    {
+        "model": "hmsSite.school",
+        "pk": 12,
+        "fields": {
+            "name": "Business School"
+        }
+    },
+    {
+        "model": "hmsSite.faculty",
+        "pk": 1,
+        "fields": {
+            "name": "Faculty of Health and Medical Sciences"
+        }
+    },
+    {
+        "model": "hmsSite.faculty",
+        "pk": 2,
+        "fields": {
+            "name": "Faculty of Engineering and Mathematical Sciences"
+        }
+    },
+    {
+        "model": "hmsSite.faculty",
+        "pk": 3,
+        "fields": {
+            "name": "Faculty of Arts, Business, Law and Education"
+        }
+    },
+    {
+        "model": "hmsSite.faculty",
+        "pk": 4,
+        "fields": {
+            "name": "Faculty of Science"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add project",
+            "content_type": 1,
+            "codename": "add_project"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change project",
+            "content_type": 1,
+            "codename": "change_project"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete project",
+            "content_type": 1,
+            "codename": "delete_project"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view project",
+            "content_type": 1,
+            "codename": "view_project"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add faculty",
+            "content_type": 2,
+            "codename": "add_faculty"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change faculty",
+            "content_type": 2,
+            "codename": "change_faculty"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete faculty",
+            "content_type": 2,
+            "codename": "delete_faculty"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view faculty",
+            "content_type": 2,
+            "codename": "view_faculty"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add school",
+            "content_type": 3,
+            "codename": "add_school"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change school",
+            "content_type": 3,
+            "codename": "change_school"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete school",
+            "content_type": 3,
+            "codename": "delete_school"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view school",
+            "content_type": 3,
+            "codename": "view_school"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 4,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 4,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 4,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 4,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 5,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 5,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 5,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 5,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 6,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 6,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 6,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 6,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 7,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 7,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 7,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 7,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 8,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 8,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 8,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 8,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 9,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 9,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 9,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 9,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 1,
+        "fields": {
+            "name": "Business School Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 2,
+        "fields": {
+            "name": "School of Design Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 3,
+        "fields": {
+            "name": "Law School Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 4,
+        "fields": {
+            "name": "School of Engineering Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 5,
+        "fields": {
+            "name": "School of Physics, Mathematics and Computing Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 6,
+        "fields": {
+            "name": "School of Biological Sciences Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 7,
+        "fields": {
+            "name": "School of Earth Sciences Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 8,
+        "fields": {
+            "name": "School of Human Sciences Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 9,
+        "fields": {
+            "name": "School of Biomedical Sciences Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 10,
+        "fields": {
+            "name": "School of Allied Health Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 11,
+        "fields": {
+            "name": "Dental School Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 12,
+        "fields": {
+            "name": "School of Population and Global Health Admins",
+            "permissions": [
+                16,
+                28,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$xsXugjvzwbRv$akwqWqLIwFT5dI+zvmrXVmJo2oPx6C4zXlObPWHiZkw=",
+            "last_login": "2020-09-21T02:10:32.003Z",
+            "is_superuser": true,
+            "username": "crow",
+            "first_name": "Snug",
+            "last_name": "Crow",
+            "email": "crow@test.ca",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-16T23:07:34Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$D9spKwY6n5JR$MBff26qHAwyxTVZ8oVwL2pUVePoEnFkcqXbKFtOVtjM=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "SuperUser",
+            "first_name": "Super",
+            "last_name": "User",
+            "email": "SuperUser@test.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-16T23:08:29Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$ltD7d66aVCDA$Ioo2uThXqjjUv3H1ZZbjugnKTXIc7v82b+nRTndbbmM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "StaffUser",
+            "first_name": "Staff",
+            "last_name": "User",
+            "email": "StaffUser@test.ca",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-16T23:09:01Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$OyA6mO5G1EUE$CTdbNUn7uQk7w89EIoSnqFbMSysqbGSqbpy1dnWtsUc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "NormalUser",
+            "first_name": "Normal",
+            "last_name": "User",
+            "email": "NormalUser@test.au",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-09-16T23:09:27Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$bgMrtOu3rXqG$9vLvBYRkmsZcFHeSBhw3XKzEmTeu+MaZJqX+REtLtFc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "BusinessSchoolAdmin",
+            "first_name": "BusinessSchool",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:12:38Z",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$3pNCEJIJjuvz$oc2h2g9CbUvulQ3D/HTFHoxF90JL8QBAbCd0GFcAYT8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofDesignAdmin",
+            "first_name": "SchoolofDesign",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:13:27Z",
+            "groups": [
+                2
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$QO6JF8x3ZwDG$68oT523BMsoQFxiI3QMKpPoC2dOIyCU93apcrpnChWs=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "LawSchoolAdmin",
+            "first_name": "LawSchool",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:14:44Z",
+            "groups": [
+                3
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 8,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$5fWkxm5QNuEH$yTe4CpCfCZE2+P20WTA/ICmLikXTGHvOz9PWRTtg/qQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofEngineeringAdmin",
+            "first_name": "SchoolofEngineering",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:15:24Z",
+            "groups": [
+                4
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 9,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$uV52OMND2WGr$ZlYEGsLmC/3U0+jX1M0jF2paogPaDa8Cq18h/qmoDXI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofPhysicsMathematicsandComputingAdmin",
+            "first_name": "SchoolofPhysicsMathematicsandComputing",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:16:13Z",
+            "groups": [
+                5
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 10,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$xrCd2Ds3MICm$rT8TW2x60ca3GSliaJx9/GuhPbzWX8Ci5j4a80tq6r4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofBiologicalSciencesAdmin",
+            "first_name": "SchoolofBiologicalSciences",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:16:44Z",
+            "groups": [
+                6
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 11,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$ajFXyT5S3bKv$KVRadhVgdhjFaSxHzJBTDltWj3Lmso2Edw+8w/mSNeY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofEarthSciencesAdmin",
+            "first_name": "SchoolofEarthSciences",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:17:15Z",
+            "groups": [
+                7
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 12,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$xRS8qNIVktvf$xit+MRPMZpu9xVo9hZrSbOTVfbwTMUT/pgqXdvFN3v4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofHumanSciencesAdmin",
+            "first_name": "SchoolofHumanSciences",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:17:53Z",
+            "groups": [
+                8
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 13,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$YYdZ8DgYZfTq$Ovla0Xq05yuzxeMShDaNC+AvLF80lAeVOFBDvFMURpU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofBiomedicalSciencesAdmin",
+            "first_name": "SchoolofBiomedicalSciences",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:18:23Z",
+            "groups": [
+                9
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 14,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$agGNu1hsUTAy$MVWXH9Nat5wicRcNH4iEAaOkXquK4cep3GKM1wAOAmU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofAlliedHealthAdmin",
+            "first_name": "SchoolofAlliedHealth",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:18:54Z",
+            "groups": [
+                10
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 15,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$EEb7ZWGPOxDJ$mpEbqJTgwnkdP8H8hizPcBP9VHqTBaF0wDgjnWzwReo=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "DentalSchoolAdmin",
+            "first_name": "DentalSchool",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:19:18Z",
+            "groups": [
+                11
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 16,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$RoC6dcP4f0kQ$/hRsSuTLD87sqQN8hDeLCD4rI/UYx9Diuk0lyknxfo4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "SchoolofPopulationandGlobalHealthAdmin",
+            "first_name": "SchoolofPopulationandGlobalHealth",
+            "last_name": "Admin",
+            "email": "test@mail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-09-21T02:19:50Z",
+            "groups": [
+                12
+            ],
+            "user_permissions": []
+        }
+    }
+]

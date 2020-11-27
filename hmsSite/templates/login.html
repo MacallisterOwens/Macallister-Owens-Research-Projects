@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+        
+    <nav class="navbar navbar-light" style="background-color: lightgrey; color:#003087; text-align:center; justify-content:center">
+    	<div style="text-align:center">
+            <h1 style="text-align:center">Login to the UWA Network</h1>
+        </div>
+	</nav>
+
+    <div style="display: flex; padding-top: 30px; padding-bottom: 30px; justify-content: center;">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            
+        	<input type="submit" class="btn btn-primary btn-sm" value="Login" style="text-align: center"/>
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
+    </div>
+
+
+    <footer class="footer">
+		<div class="grid">
+			<div class="item-a">
+				<img src="\static\Images\group_of_8 _blanl.png" class="img-fluid" alt="Group of 8 Member" style="width:60%">
+			</div>
+			<div class="item-c">
+				<img src="\static\Images\UWA_Formal_Landscape_white.png" alt="UWA image" style="width:80%">
+			</div>
+		</div>
+	</footer>
+{% endblock %}

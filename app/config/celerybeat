@@ -1,0 +1,9 @@
+export DJANGO_SETTINGS_MODULE="production"
+CELERY_APP = 'app'
+CELERY_BIN = '/antenv/bin/celery'
+CELERYBEAT_CHDIR="/home/site/wwwroot"
+CELERYD_CHDIR="/home/site/wwwroot"
+CELERYBEAT_OPTS="--broker redis://localhost:6379/0 --schedule django_celery_beat.schedulers:DatabaseScheduler --concurrency=2"
+CELERYBEAT_PID_FILE="/home/site/wwwroot/celerybeat.pid"
+CELERYBEAT_LOG_FILE="/home/site/wwwroot/celeryd.log"
+CELERYBEAT_LOG_LEVEL="INFO"

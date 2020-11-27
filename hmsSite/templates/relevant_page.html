@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content-header %}
+	<div class="content-header">
+			<div class="page-header">
+          <img class="card-img-new" src="\static\Images\hmshomepage-header-1920_x_432.jpeg" alt="HomePage" ></img>
+          <h1 class="card-title-new">Higher Degree by Research Opportunities</h1>
+			</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+  <h2 class="module-title">
+    Do you wish to continue displaying your project?    
+  </h2>
+  <div class="container">
+    <div style="display: flex; padding-top: 30px; padding-bottom: 30px; justify-content: center;">
+      <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>
+          Editing a project continues the project for another 6 months, you are also able to click continue then edit your page. 
+          Please note after editing your project it will be unpublished until the project is re-approved.
+        </p>
+        <input type="submit" value="Submit" class="btn btn-primary btn-sm">
+      </form>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+		<div class="grid">
+			<div class="item-a">
+				<img src="\static\Images\group_of_8 _blanl.png" class="img-fluid" alt="Group of 8 Member" style="width:60%">
+			</div>
+			<div class="item-c">
+				<img src="\static\Images\UWA_Formal_Landscape_white.png" alt="UWA image" style="width:80%">
+			</div>
+		</div>
+	</footer>
+{% endblock %}

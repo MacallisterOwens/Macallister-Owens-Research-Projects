@@ -1,0 +1,939 @@
+html{
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia,serif;
+}
+
+.content{
+  flex: 1 0 auto;
+}
+
+.content-header{
+  /*flex: 1 0 auto;*/
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow-x: hidden; /* To make moblie friendly  */
+}
+
+.page-header{
+  font-family: TTNormsPro important!;
+  width: 100%;
+  height: 100%;
+}
+
+.footer{
+  font-family: TTNormsPro;
+  background-color: #003087;
+  border-bottom-style: solid;
+  border-width: 5px;
+  border-color: #DAAA00;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.grid{
+  display: grid;
+  align-content: end;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  grid-auto-flow: column;
+}
+
+.item-a{
+  grid-column: 1;
+  grid-row: 2/3;
+  justify-self: start;
+}
+
+.item-b{
+  grid-column: 2;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+  color:black;
+}
+
+.item-c{
+  grid-column: 3;
+  grid-row: 2/3;
+  justify-self: end;
+  align-self: center;
+}
+
+/*contact information grid to match - https://www.uwa.edu.au/science/research/phd-opportunities
+.contact-grid-one-contact{
+  display: grid;
+  /*align-content: end;
+  justify-content: space-around;
+  grid-template-columns: 100px 1fr 1fr 100px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". contact-1 contact-1 ."
+}
+
+.contact-grid-two-contact{
+  display: grid;
+  /*align-content: end;
+  justify-content: space-around;
+  grid-template-columns: 100px 1fr 1fr 100px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". contact-1 contact-2 ."
+}
+
+.item-contact-1{
+  grid-area: contact-1;
+  /*align-content: end
+  justify-content: space-around;
+  grid-template-columns: 100px 1fr 1fr 100px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". phone-1 email-1 ."
+}
+
+.item-contact-2{
+  grid-area: contact-2;
+  /*align-content: end;
+  justify-content: space-around;
+  grid-template-columns: 100px 1fr 1fr 100px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". phone-2 email-2 ."
+}
+.item-phone-1{
+  grid-area: phone-1;
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.item-phone-2{
+  grid-area: phone-2;
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.item-email-1{
+  grid-area: email-1;
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.item-email-2{
+  grid-area: email-2;
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.project-email-section-1{
+  text-align: left;
+  /*padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.project-email-section-2{
+  text-align: left;
+  /*padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.project-phone-section-1{
+  text-align: left;
+  /*padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.project-phone-section-2{
+  text-align: left;
+   /*padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+*/
+
+.contact-image{
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+
+.addProject{
+  border: 0px white;
+  background-color: white;
+  color: black;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+}
+.container{
+  padding: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Overide the bootstrap styling so banner image does not have padding on top and bottom */     
+.pb-5, .py-5{
+    padding-bottom: 2rem!important;
+    padding-top: 0rem!important;
+}
+
+/* Modify serach icon */
+.btn-primary{
+    background-color: #DAAA00;
+    border: 0px;
+}
+
+/* Filtered projects display */
+.project-card-filters {
+    margin: auto;
+    width: 50%;
+    min-width: 350px;
+    background-color: white;
+    border-radius: calc(.25rem - 1px);
+    padding: 0.5em 0em;
+}
+.object-container-filter {
+    padding: 0px 30px;
+}
+.filters_text {
+    padding: 0px 10px;
+    color: #000000;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-weight: 400;
+}
+.no-results {
+    text-align: center;
+}
+
+/* Sort by */
+.sort-by-container {
+    display: block;
+    margin: auto;
+    width: 15em;
+}
+.form-group {
+    text-align: center;
+}
+label.text-dark {
+    font-family: "TTNormsPro",Arial,sans-serif;
+}
+select#sort_by_select {
+    font-family: "TTNormsPro",Arial,sans-serif;
+}
+
+/* Modify text of image banner */   
+h1.card-title-new{
+    margin-bottom: 1.5rem;
+    color: #fff;
+    line-height: 1.1;
+    margin-top: 0;
+    text-rendering: optimizeLegibility;
+    font-style: normal;
+    font-weight: 500;
+    font-family: "novel-pro","Novel Pro ",Georgia,serif;
+    font-size: 30px;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    width: 90%;
+    font-size: 2rem;
+    top: 40%;
+}
+
+
+img.card-img-new {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-researcher-name{
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+}
+
+
+/* Modify the navbar background color */     
+.navbar-custom { 
+color: #003087; 
+} 
+
+/* Modify brand and text color */ 
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+color: #003087; 
+} 
+
+/* Carousel styling */
+
+.carousel-container {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+img.carousel-card-img-top {
+    display: block;
+    width: 80%;
+    margin: auto;
+    height: 500px;
+}
+h5.carousel-card-title {
+    font-family: "TTNormsPro",sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-rendering: optimizeLegibility;
+    color: #000;
+    font-style: normal;
+    font-weight: 500;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    margin: 5px 0px;
+}
+p.carousel-card-text {
+    position: relative;
+    margin-bottom: 0;
+    overflow-y: hidden;
+    color: #464646;
+    font-size: inherit;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 17px;
+    text-align: left;
+    margin: 5px 0px;
+}
+a.btn.btn-primary {
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+span.project-subtitle-carousel {
+    display: block;
+    font-size: .875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    /* line-height: inherit; */
+    font-family: "TTNormsPro",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 21px;
+    margin: 10px 0px 5px 0px;
+    cursor: pointer;
+}
+p.more_info {
+    line-height: 27px;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-size: 17px;
+    margin: 5px 0px;
+    color: black;
+    font-style: italic;
+}
+
+
+
+/* Single project styling */
+.project-card{
+    margin: auto;
+    width: 50%;
+    min-width: 350px;
+}
+.objects-container{
+  background-color: #f0f0f4;
+}
+.object-container{
+  padding: 30px;
+}
+.card-body{
+  background-color: white;
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: calc(.25rem - 1px);
+}
+h5.card-title{
+  font-weight: 500;
+  font-family: "novel-pro","Novel Pro ",Georgia,serif;
+  color: black;
+  font-size: calc(20px + 4*((100vw - 640px)/640));
+}
+.card-text{
+    color: #000000;
+    font-family: "TTNormsPro",Arial,sans-serif ;
+    font-weight: 400;
+}
+
+a.carousel-control-prev {
+    border: 0;
+    border-radius: 100%;
+    background: #5e5e5e;
+    width: 3.125rem;
+    height: 3.125rem;
+    transform: none;
+    white-space: normal;
+    text-indent: inherit;
+    font-size: 2.1875rem;
+    color: #5e5e5e;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+a.carousel-control-next {
+    border: 0;
+    border-radius: 100%;
+    background: #5e5e5e;
+    width: 3.125rem;
+    height: 3.125rem;
+    transform: none;
+    white-space: normal;
+    text-indent: inherit;
+    font-size: 2.1875rem;
+    color: #5e5e5e;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-card-body {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+/* Scholarship styling on indivudual project page */
+
+h2.module-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-rendering: optimizeLegibility;
+    color: #000;
+    font-style: normal;
+    /* font-size: 24px; */
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: "novel-pro","Novel Pro ",Georgia,serif;
+    padding-top: 30px; 
+}
+.panel-title{
+    display: block;
+    padding: 1rem 1rem 1rem 1.8rem;
+    line-height: 1.5;
+    color: #27348b;
+    font-weight: 700;
+    position: relative;
+    border: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    list-style-type: none;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    text-align: -webkit-match-parent;
+    border-radius: 0 0 0 0;
+    border-bottom: 1px solid #eaeef2;
+
+}
+
+.panel-body {
+    background-color: #fff;
+    border: 0px;
+    padding: .4rem 1rem 1rem 1.8rem;
+    font-size: 1rem;
+    box-sizing: inherit;
+    text-align: -webkit-match-parent;
+    color: #000000;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-weight: 400;
+    display: block;
+}
+.panel-title:before {
+  content: '\002B';
+  color: #e2b600;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+}
+
+.scholarship-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    border-top: 1px solid #eaeef2;
+}
+
+/* Image banner of individual project page */
+.content-header-new {
+    height: 300px;
+    overflow: hidden;
+}
+
+/*How to apply section */
+p.module-sub-title {
+    font-weight: 100;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 1rem;
+    text-align: center;
+    font-family: TTNormsPro, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 0px;
+    text-rendering: optimizelegibility;
+}
+
+h3.steps {
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 12px;
+    margin-top: 0px;
+    text-rendering: optimizelegibility;
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    line-height: 1.3;
+    font-size: 21.8px;
+    font-weight: 500;
+    font-family: novel-pro, "Novel Pro ", Georgia, serif;
+    /* text-size-adjust: 100%; */
+}
+p.steps-p {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+.expression-of-interest-form {
+    text-align: center;
+    /* padding-bottom: 30px; */
+}
+.module-container.normal {
+    padding-bottom: 35px;
+}
+
+
+button.btn-primary-solid.expression-of-interest-form__trigger {
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: .7em 1em;
+    margin: 0 0 1rem;
+    font-size: .9rem;
+    font-weight: 400;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    background-color: #e2b600;
+    color: #27348b;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: inherit;
+    transition: all .3s ease;
+    display: inline-block;
+    width: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    align-items: flex-start;
+    font-weight: 400;
+}
+button.btn-primary-solid.expression-of-interest-form__trigger::after {
+    font-family: "TTNormsPro",sans-serif;
+    content: "»";
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: .5rem;
+    transition: transform .3s ease;
+    font-size: 1.5em;
+    vertical-align: -.07em;
+}
+li.step-links {
+    display: block;
+    margin: auto;
+}
+
+/* funding and collab section of individual project page */
+.funds-collab-container {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    border-top: 1px solid #eaeef2;
+}
+.left-panel-text {
+    display: block;
+    width: 50%;
+    float: left;
+}
+.right-panel-image {
+    display: block;
+    width: 50%;
+    float: right;
+    padding-top: 3em;
+}
+img.img-fluid-new {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+strong.strong-subtitle {
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16.7px;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ul.funds-list {
+    -webkit-font-smoothing: antialiased;
+    margin-left: .75rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    display: block;
+    /* list-style-type: disc; */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-weight: 400;
+}
+li.funds-list-element {
+    position: relative;
+    margin: .5rem;
+    font-size: inherit;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    line-height: 1.4;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+li.funds-list-element::before {
+    display: inline-block;
+    font: 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    position: absolute;
+    top: .3125rem;
+    left: -.875rem;
+    color: #ddd;
+    font-size: .75rem!important;
+}
+
+/* suggested readings */
+.readings-container {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    border-top: 1px solid #eaeef2;
+}
+.left-panel-text-reading {
+    display: block;
+    width: 100%;
+    float: left;
+}
+.right-panel-image-quals {
+    /* display: inline-block; */
+    display: block;
+    width: 50%;
+    float: right;
+    /* padding-top: 3em; */
+    /* vertical-align: text-top; */
+}
+
+h2.module-title-desc {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-rendering: optimizeLegibility;
+    color: #000;
+    font-style: normal;
+    /* font-size: 24px; */
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: "novel-pro","Novel Pro ",Georgia,serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* margin-bottom: 12px; */
+}
+
+/* contact details section when there is a one contact */
+.contact-details-one-container{
+  display: block;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  border-top: 1px solid #eaeef2;
+}
+
+/* contact details section when there is a second contact */
+.contact-details-two-container{
+  display: block;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  border-top: 1px solid #eaeef2;
+}
+
+/* contact details section when there is a second contact && in mobile viewe */
+.contact-details-two-container-mobile{
+  display: none;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  border-top: 1px solid #eaeef2;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .contact-details-two-container {
+    display: none;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    border-top: 1px solid #eaeef2;
+  }
+  .contact-details-two-container-mobile {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    border-top: 1px solid #eaeef2;
+  }
+}
+
+/*Search bar drop-down*/
+
+.custom-control{
+  
+    font-weight: normal;
+}
+.dropdown-toggle{
+    padding-left: 10px;
+    border-radius: 0.5rem !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    padding: 15px;
+
+    
+}
+.dropdown.dropdown-lg .dropdown-menu{
+    min-width: 320px;
+    
+}
+.dropdown-menu{
+    box-shadow: 1px 4px 8px -1px #c1c1c1;
+
+}
+.show{
+    display: block;
+    
+}
+.col-lg-6.offset-lg-3.col-sm-8.offset-sm-2.col-12 {
+    padding: 50px;
+}
+
+/* Add project page */
+label {
+    float: left;
+    font-family: "TTNormsPro",Arial,sans-serif;
+}
+.url2 {
+    float: left;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    margin: 0px 0px 8px;
+}
+
+
+@media only screen and (max-width: 500px) {
+  img.carousel-card-img-top {
+    display: block;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+  }
+  .right-panel-image {
+    display: block;
+    width: 50%;
+    /* float: right; */
+    padding-top: 3em;
+    width: 100%;
+  }
+  .left-panel-text {
+      display: block;
+      width: 50%;
+      /* float: left; */
+      width: 100%;
+  }
+  h1.card-title-new{
+    width: 80%;
+  }
+  .right-panel-image-quals {
+    /* display: inline-block; */
+    display: block;
+    width: 100%; 
+    margin: auto;
+    /* padding-top: 3em; */
+    /* vertical-align: text-top; */
+  }
+  .left-panel {
+    display: block;
+    width: 100%;
+    float: left;
+  }
+  .right-panel {
+      display: block;
+      width: 100%;
+      float: left;
+  }
+  img.card-img-new {
+    height: 200px;
+  }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+  img.carousel-card-img-top {
+    display: block;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+  }
+  .right-panel-image {
+    display: block;
+    width: 50%;
+    /* float: right; */
+    padding-top: 3em;
+    width: 100%;
+  }
+  .left-panel-text {
+      display: block;
+      width: 50%;
+      /* float: left; */
+      width: 100%;
+  }
+  h1.card-title-new{
+    width: 80%;
+  }
+  .right-panel-image-quals {
+    /* display: inline-block; */
+    display: block;
+    width: 100%; 
+    margin: auto;
+    /* padding-top: 3em; */
+    /* vertical-align: text-top; */
+  }
+  .object-container-filter {
+    padding: 0px ;
+    min-width: 0px ;
+    width: 95%;
+    margin: auto;
+
+  }
+  .object-container  {
+    padding: 0px ;
+  }
+  .project-card {
+    min-width: 300px;
+    padding: 15px 0px;   
+  }
+  .left-panel {
+    display: block;
+    width: 100%;
+    float: left;
+  }
+  .right-panel {
+      display: block;
+      width: 100%;
+      float: left;
+  }
+.pheme-login{
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+
+.image-grid-container { 
+  display: grid; 
+    
+  /* For 3 columns */ 
+  grid-template-columns: auto auto auto; 
+} 
+
+}
+

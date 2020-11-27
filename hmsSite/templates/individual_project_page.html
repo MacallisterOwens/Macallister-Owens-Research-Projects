@@ -1,0 +1,531 @@
+{% extends 'base.html' %}
+
+{% block content-header %}
+	<div class="content-header-new">
+		{% if object.image %}
+      <img class="card-img-new" src="{{object.image.url}}" alt="HomePage" ></img>
+    {% elif object.image_stock %}
+      <img class="card-img-new" src="{{object.image_stock.image.url}}" alt="HomePage" ></img>
+    {% else %}
+      <img class="card-img-new" src="\static\Images\hmshomepage-header-1920_x_432.jpg" alt="HomePage" ></img>
+		{% endif %}
+    <h1 class="card-title-new">{{object.title}}</h1>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% if object.goals or object.benefits %}
+
+  <div class="funds-collab-container">
+    <h2 class="module-title-desc"> {{ object.short_desc }} </h2>
+    <div class="left-panel-text">
+      {{ object.desc }}
+    </div>
+    <div class="right-panel-image-quals">
+      <div class="item-funds-new">
+          {% if object.goals %}
+            <ul class="funds-list">
+              <strong class="strong-subtitle">Project goals </strong>
+              <li class="funds-list-element">
+                {{object.goals}}
+              </li>   
+            </ul>
+          {% endif %}
+          {% if object.benefits  %}
+            <ul class="funds-list">
+              <strong class="strong-subtitle">Project benefits </strong>
+              <li class="funds-list-element">
+                {{object.benefits}}
+              </li>   
+            </ul>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+{% else %}
+  <div class="funds-collab-container">
+    <h2 class="module-title-desc"> {{ object.short_desc }} </h2>
+    <div class="middle-panel-text">
+      {{ object.desc }}
+    </div>
+  </div>
+
+{% endif %}
+
+<!--if the project has a second contact person the contact details sit next to each other-->
+{% if object.contact2_name %}
+  <div class="contact-details-two-container">
+    <h2 class="module-title">Project Contact </h2>
+    <div class="module-wrapper clearfix no-padding-bottom">
+      <div class="row">
+        <div class="col">
+        <!-- contact name -->
+          {% if object.contact1_url %}
+            <div class="d-flex justify-content-center">
+              <a href="{{object.contact1_url}}" class="btn-lg" role="button" style="text-align: center" >{{object.contact1_name}}</a>
+            </div>
+          {% else %}
+            <p>{{object.contact1_name}}</p>
+          {% endif %}
+        </div>
+        <div class="col">
+          <!-- contact name -->
+          {% if object.contact2_url %}
+            <div class="d-flex justify-content-center">
+              <a href="{{object.contact2_url}}" class="btn-lg" role="button" style="text-align: center" >{{object.contact2_name}}</a>
+            </div>
+          {% else %}
+            <p>{{object.contact2_name}}</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+        <!-- phone information -->
+          <img class="contact-image" src="\static\Images\phone_icon.png" alt="Phone"></img>
+          <h3>Phone</h5>
+          <p>Get in touch</p>
+          <a href="{{object.contact1_phone}}">
+            {{object.contact1_phone}}
+          </a>
+        </div>
+        <div class="col text-center">
+        <!-- email information -->
+          <img class="contact-image" src="\static\Images\email_icon.png" alt="Phone"></img>
+          <h3 class="steps">Email</h5>
+          <p class="info-snippet-description">Send an enquiry</p>
+          <a class="info-snippet-link" href="{{object.contact1_email}}" style="word-wrap: break-word">
+            {{object.contact1_email}}
+          </a>
+        </div>
+        <div class="col text-center">
+        <!-- phone information -->
+          <img class="contact-image" src="\static\Images\phone_icon.png" alt="Phone"></img>
+          <h3>Phone</h5>
+          <p>Get in touch</p>
+          <a href="{{object.contact2_phone}}">
+            {{object.contact2_phone}}
+          </a>
+        </div>
+        <div class="col text-center">
+        <!-- email information -->
+          <img class="contact-image" src="\static\Images\email_icon.png" alt="Phone"></img>
+          <h3 class="steps">Email</h5>
+          <p class="info-snippet-description" style="word-wrap: break-word">Send an enquiry</p>
+          <a class="info-snippet-link" href="{{object.contact2_email}}" style="word-wrap: break-word">
+            {{object.contact2_email}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile view -->
+  <div class="contact-details-two-container-mobile">
+    <h2 class="module-title">Project Contact 1</h2>
+    <div class="module-wrapper clearfix no-padding-bottom">
+      <div class="row">
+        <div class="col">
+        <!-- contact name -->
+          {% if object.contact1_url %}
+            <div class="d-flex justify-content-center">
+              <a href="{{object.contact1_url}}" class="btn-lg" role="button" style="text-align: center" >{{object.contact1_name}}</a>
+            </div>
+          {% else %}
+            <p>{{object.contact1_name}}</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+        <!-- phone information -->
+          <img class="contact-image" src="\static\Images\phone_icon.png" alt="Phone"></img>
+          <h3>Phone</h5>
+          <p>Get in touch</p>
+          <a href="{{object.contact1_phone}}">
+            {{object.contact1_phone}}
+          </a>
+        </div>
+        <div class="col text-center">
+        <!-- email information -->
+          <img class="contact-image" src="\static\Images\email_icon.png" alt="Phone"></img>
+          <h3 class="steps">Email</h5>
+          <p class="info-snippet-description">Send an enquiry</p>
+          <a class="info-snippet-link" href="{{object.contact1_email}}" style="word-wrap: break-word">
+            {{object.contact1_email}}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="module-title">Project Contact 2</h2>
+    <div class="module-wrapper clearfix no-padding-bottom">
+      <div class="row">
+        <div class="col">
+          <!-- contact name -->
+          {% if object.contact2_url %}
+            <div class="d-flex justify-content-center">
+              <a href="{{object.contact2_url}}" class="btn-lg" role="button" style="text-align: center" >{{object.contact2_name}}</a>
+            </div>
+          {% else %}
+            <p>{{object.contact2_name}}</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+        <!-- phone information -->
+          <img class="contact-image" src="\static\Images\phone_icon.png" alt="Phone"></img>
+          <h3>Phone</h5>
+          <p>Get in touch</p>
+          <a href="{{object.contact2_phone}}">
+            {{object.contact2_phone}}
+          </a>
+        </div>
+        <div class="col text-center">
+        <!-- email information -->
+          <img class="contact-image" src="\static\Images\email_icon.png" alt="Phone"></img>
+          <h3 class="steps">Email</h5>
+          <p class="info-snippet-description" style="word-wrap: break-word">Send an enquiry</p>
+          <a class="info-snippet-link" href="{{object.contact2_email}}" style="word-wrap: break-word">
+            {{object.contact2_email}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+ <div class="contact-details-one-container">
+    <h2 class="module-title">Project Contact </h2>
+    <div class="row">
+      <div class="col">
+      <!-- contact name -->
+        {% if object.contact1_url %}
+          <div class="d-flex justify-content-center">
+            <a href="{{object.contact1_url}}" class="btn-lg" role="button" style="text-align: center" >{{object.contact1_name}}</a>
+          </div>
+        {% else %}
+          <p>{{object.contact1_name}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+      <!-- phone information -->
+        <img class="contact-image" src="\static\Images\phone_icon.png" alt="Phone"></img>
+        <h3>Phone</h5>
+        <p>Get in touch</p>
+        <a href="{{object.contact1_phone}}">
+          {{object.contact1_phone}}
+        </a>
+      </div>
+      <div class="col text-center">
+      <!-- email information -->
+        <img class="contact-image" src="\static\Images\email_icon.png" alt="Phone"></img>
+        <h3 class="steps">Email</h5>
+        <p class="info-snippet-description">Send an enquiry</p>
+        <a class="info-snippet-link" href="mailto:{{object.contact1_email}}"style="word-wrap: break-word">
+          {{object.contact1_email}}
+        </a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+  
+
+
+{% if object.pref_qualifications and object.qualifications %}
+  <div class="funds-collab-container">
+    <h2 class="module-title">Qualifications </h2>
+    <div class="left-panel-text">
+      <!--project funds-->
+      <div class="item-funds-new">
+          {% if object.qualifications %}
+            <strong class="strong-subtitle">Mandatory Qualifications </strong>
+            <ul class="funds-list">
+              <li class="funds-list-element">
+                {{object.qualifications}}
+              </li>   
+            </ul> 
+          {% endif %}
+      </div>
+    </div>
+    <div class="right-panel-image-quals">
+      <div class="item-collaborators-new">
+          {% if object.pref_qualifications %}
+            <ul class="funds-list">
+              <strong class="strong-subtitle"> Preferred Qualifications </strong>
+              <li class="funds-list-element">
+                {{object.pref_qualifications}}  
+              </li>
+            </ul>
+          {% endif %}
+      </div>
+
+    </div>
+  </div>
+{% elif object.pref_qualifications %}
+  <div class="funds-collab-container">
+    <div class="item-collaborators-new">
+      <ul class="funds-list">
+        <strong class="strong-subtitle"> Preferred Qualifications </strong>
+        <li class="funds-list-element">
+          {{object.pref_qualifications}}  
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% elif object.qualifications %}
+  <div class="funds-collab-container">
+    <h2 class="module-title">Qualifications </h2>
+    <div class="item-funds-new">
+        <ul class="funds-list">
+          <strong class="strong-subtitle">Mandatory Qualifications </strong>
+          <li class="funds-list-element">
+            {{object.qualifications}}
+          </li>   
+        </ul> 
+    </div>
+  </div>
+
+{% endif %}
+
+
+
+{% if  object.readings  %}
+  <div class="readings-container">
+    <h2 class="module-title">Suggested readings </h2>
+    <div class="left-panel-text-reading">
+      <!--project funds-->
+      <div class="item-funds-new">
+        <ul class="funds-list">
+          <li class="funds-list-element">
+            {{object.readings }}
+          </li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+{% if object.funds or object.funds %}
+  <div class="funds-collab-container">
+    <h2 class="module-title">Funding and Collaborations </h2>
+    <div class="left-panel-text">
+      <!--project funds-->
+      <div class="item-funds-new">
+          {% if object.funds %}
+          <ul class="funds-list">
+            <strong class="strong-subtitle"> Project Funds </strong>
+            <li class="funds-list-element">
+              {{object.funds}}
+            </li>   
+          </ul>
+              
+          {% endif %}
+      </div>
+
+      <!--project Collaborators-->
+      <div class="item-collaborators-new">
+          {% if object.collab %}
+            <ul class="funds-list">
+              <strong class="strong-subtitle"> Project Collaborators </strong>
+              <li class="funds-list-element">
+                {{object.collab}}  
+              </li>
+            </ul>
+          {% endif %}
+      </div>
+    </div>
+    <div class="right-panel-image">
+      <!--project Collaborators image class="card-img"-->
+      <div class="item-collaborators-image-new">
+        <div class="image-div">
+          <img  src="\static\Images\collaborator_handshake.png" alt="Collaborators" class="img-fluid-new"></img>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+{% endif %}
+  
+
+
+
+
+<!--project How to Apply section-->
+<div class="scholarship-container">
+
+    <div class="module-container normal">            
+        <div id="" class="rich-text-content">
+            <h2 class="module-title">How to apply</h2>
+            <p class="module-sub-title">
+                Interested in becoming part of this project? Complete the following steps to submit your expression of interest:
+            </p>
+        </div>
+    </div>
+
+    <div class="module-wrapper clearfix no-padding-bottom">
+      <div class="module-container normal">           
+        <div id="" class="rich-text-content">
+          <h3 class="steps">Check criteria (required) </h3>
+          <p class="steps-p">
+            General UWA PhD entrance requirements can be found on the <a href="https://study.uwa.edu.au/courses/doctor-of-philosophy#entry" target="_parent">Future Students</a> website.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="module-wrapper clearfix no-padding-bottom">
+      <div class="module-container normal">           
+        <div id="" class="rich-text-content">
+          <h3 class="steps">Submit enquiry to research team leader</h3>
+          <div class="expression-of-interest-form" data-sitecore-module="Expression of Interest Form">
+            <a href="mailto:{{object.contact1_email}}">
+              <button type="button" class="btn-primary-solid expression-of-interest-form__trigger" >
+                Email Team Leader
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module-wrapper clearfix no-padding-bottom">
+      <div class="module-container normal">           
+        <div id="" class="rich-text-content">
+          <h3 class="steps">Submit an expression of interest to {{object.faculty}} (required) </h3>
+          <p class="steps-p">
+            As a prospective research student, you are required to meet the entry conditions set out by the 
+            <a href="http://www.postgraduate.uwa.edu.au/courses">Graduate Research School.</a>
+            If you do not meet the criteria for entry or are uncertain, contact the Higher Degree by Research (HDR) support team in the most appropriate faculty for advice.<br>
+            <br>
+            Once you submit your expression of interest your qualifications and English language proficiency will be assessed as to whether you meet the minimum entry requirements for a postgraduate research degree
+          </p>
+
+          <ul class="funds-list">
+            <strong class="strong-subtitle">Faculty Contacts </strong>
+            <li class="funds-list-element">
+              Faculty of Arts, Business, Law and Education: <a href="mailto:hdr-fable@uwa.edu.au">hdr-fable@uwa.edu.au </a>
+            </li> 
+            <li class="funds-list-element">
+              Faculty of Engineering and Mathematical Sciences: <a href="mailto:hdr-ems@uwa.edu.au">hdr-ems@uwa.edu.au</a>
+            </li>   
+            <li class="funds-list-element">
+              Faculty of Health and Medical Sciences: <a href="mailto:hdr-hms@uwa.edu.au">hdr-hms@uwa.edu.au</a>
+            </li>   
+            <li class="funds-list-element">
+              Faculty of Science: <a href="hdr-science@uwa.edu.au">hdr-science@uwa.edu.au</a>
+            </li>     
+          </ul>
+
+          
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<!--project scholarship section-->
+<div class="scholarship-container">
+    <section class= "accordion-module" >
+      <h2 class="module-title">Scholarships</h2>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default" id="panel1">
+          <div class="panel-heading" id="heading1" data-parent="#accordion">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" aria-expended="false" aria-controls="collapse1" href="#collapse1" role="button" type="button" data-parent="#accordion">
+              Domestic students </a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse" aria-labelledby="heading1" data-parent="#accordion">
+            <div class="panel-body">
+              <p>
+                All domestic students may apply for a
+                <a href="https://www.uwa.edu.au/study/research/research-scholarships" target="_blank">University Postgraduate Awards (UPA)</a>
+                , for more information please click the
+                <a href="https://www.uwa.edu.au/study/fees-and-scholarships/research-training-program" target="_blank">Research Training Program page.</a>
+              </p>
+              <p>
+               Endeavour Awards and Scholarships The Australian Government's are available to Australian applicants for study in participating countries and regions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="heading2">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" aria-expended="false" aria-controls="collapse2" data-parent="#accordion" href="#collapse2" role="button">
+              Indigenous students</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse" aria-labelledby="heading2" data-parent="#accordion">
+            <div class="panel-body">
+              <p>
+                Indigenous students are encouraged to apply for <a rel="noopener noreferrer" href="http://www.scholarships.uwa.edu.au/futurestudents/postgrad/Indigenous" target="_blank">Indigenous Postgraduate Research Supplementary Scholarships</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="heading3">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" aria-expended="false" aria-controls="collapse3" data-parent="#accordion" href="#collapse3" role="button">
+              International students</a>
+              
+            </h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse" aria-labelledby="heading3" data-parent="#accordion">
+            <div class="panel-body">
+              <p>
+                A <a href="https://www.uwa.edu.au/study/international-students/fees-and-scholarships/uwa-funded-scholarships" target="_blank">range of scholarships</a> are available from international organisations and governments.
+              </p>
+              <p>
+                In addition, all international students may apply for <a rel="noopener noreferrer" href="https://www.scholarships.uwa.edu.au/futurestudents/postgrad/international" target="_blank">International Research Training Program</a> scholarships.
+              </p>
+              <p>
+                The Australian Government's Endeavour Awards and Scholarships are available to international applicants from participating countries and regions.
+              </p>
+              <p>
+                <a rel="noopener noreferrer" href="https://www.chinesescholarshipcouncil.com/" target="_blank">The China Scholarship Council (CSC)</a><span>&nbsp;and The University of Western Australia (UWA) are offering postgraduate research scholarships each year to students from the People's Republic of China who intend to undertake a Doctor of Philosophy (PhD) degree at UWA.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" aria-expended="false" aria-controls="collapse4" data-parent="#accordion" href="#collapse4" role="button">
+              Prestigious postgraduate research scholarships</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse" aria-labelledby="heading4" data-parent="#accordion">
+            <div class="panel-body">
+              <p>
+                <a href="http://www.scholarships.uwa.edu.au/futurestudents/postgrad/prestigious" target="_blank">Prestigious postgraduate research scholarships</a> support graduate research training by enabling students of exceptional research promise to undertake higher degrees by research at the University.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<footer class="footer">
+		<div class="grid">
+			<div class="item-a">
+				<img src="\static\Images\group_of_8 _blanl.png" class="img-fluid" alt="Group of 8 Member" style="width:60%">
+			</div>
+			<div class="item-c">
+				<img src="\static\Images\UWA_Formal_Landscape_white.png" alt="UWA image" style="width:80%">
+			</div>
+		</div>
+	</footer>
+
+{% endblock content %}

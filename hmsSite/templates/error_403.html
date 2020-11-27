@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content-header %}
+	<div class="content-header-new">
+		{% if object.image %}
+      <img class="card-img-new" src="{{object.image.url}}" alt="HomePage" ></img>
+    {% elif object.image_stock %}
+      <img class="card-img-new" src="{{object.image_stock.image.url}}" alt="HomePage" ></img>
+    {% else %}
+      <img class="card-img-new" src="\static\Images\hmshomepage-header-1920_x_432.jpg" alt="HomePage" ></img>
+		{% endif %}
+    <h1 class="card-title-new">{{object.title}}</h1>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+
+    <h1> Sorry, you do not have permission to view this page. </h1>
+	<a class="btn-primary" href="/home" onclick="resetSS()"> Go To Homepage </a>
+
+    <footer class="footer">
+	    <div class="grid">
+		    <div class="item-a">
+			    <img src="\static\Images\group_of_8 _blanl.png" class="img-fluid" alt="Group of 8 Member" style="width:60%">
+		    </div>
+		    <div class="item-c">
+			    <img src="\static\Images\UWA_Formal_Landscape_white.png" alt="UWA image" style="width:80%">
+		    </div>
+	    </div>
+    </footer>
+
+{% endblock content %}

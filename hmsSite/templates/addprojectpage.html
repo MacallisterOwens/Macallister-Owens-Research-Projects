@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content-header %}
+	<div class="content-header">
+		<div class="page-header">
+          <img class="card-img-new" src="\static\Images\hmshomepage-header-1920_x_432.jpeg" alt="HomePage" ></img>
+          <h1 class="card-title-new">Higher Degree by Research Opportunities</h1>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% if edit %}
+		<div class="alert alert-warning text-center" role="alert">
+			<strong class="strong-subtitle">If you submit an edit to the project, the project will require reapproval.</strong>
+		</div>
+	{% endif %}
+  <div class="container">
+    <div class="addProject">
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+		<p class="font-weight-light text-center text-lg-left mt-4 mb-0" style="padding-bottom: 1rem">If you have no image select a stock image from the drop down menu above.</p>
+        <input type="submit" value="Submit">
+
+
+
+      </form>
+	
+		<div class="row text-center text-lg-left" style="margin-top: 2rem">
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 1</p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder1.jpeg" alt="option 1">
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 2</p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder2.jpeg" alt="option 2">
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 3</p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder3.jpeg" alt="option 3">
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 4<p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder4.jpeg" alt="option 4">
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 5</p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder5.jpeg" alt="option 5">
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 6</p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder6.jpeg" alt="option 6">
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 7</p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder7.jpeg" alt="option 7">
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<p>Option 8</p>
+				<a class="d-block mb-4 h-100">
+					<img class="img-fluid img-thumbnail" src="\static\stock_images\placeholder8.jpeg" alt="option 8">
+				</a>
+			</div>
+		</div>
+		
+    </div>
+  </div>
+
+
+  <footer class="footer">
+		<div class="grid">
+			<div class="item-a">
+				<img src="\static\Images\group_of_8 _blanl.png" class="float-left img-fluid" alt="Group of 8 Member" style="justify-self:start;width:60%">
+			</div>
+			<div class="item-c">
+				<img src="\static\Images\UWA_Formal_Landscape_white.png" alt="UWA image" style="width:80%">
+			</div>
+		</div>
+	</footer>
+{% endblock %}
+
+
+

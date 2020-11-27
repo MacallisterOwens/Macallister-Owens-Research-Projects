@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content-header %}
+
+	<div class="content-header">
+			<div class="page-header">
+          <img class="card-img-new" src="\static\Images\hmshomepage-header-1920_x_432.jpeg" alt="HomePage" ></img>
+          <h1 class="card-title-new">Higher Degree by Research Opportunities</h1>
+			</div>
+	</div>
+{% endblock %}
+
+	{% block content %}
+  <h2 class="module-title">
+    Submit enquiry to research team leader, {{object.contact1_name}}, for the project {{object.title}}.    
+  </h2>
+  <div class="container">
+    <div class="addProject">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="left-panel">
+          <label for="given_name">Given Name</label>
+          <input type="text" class="fname" id="fname1" name="given_name"><br>
+          <label for="family_name">Family Name</label>
+          <input type="text" class="fname" id="fname2" name="family_name"><br>
+          <label for="email">Email</label>
+          <input type="text" class="fname" id="fname3" name="email"><br>
+        </div>
+        <div class="right-panel">
+          <label for="message">Message</label>
+          <input type="text" class="fname" id="fname4" name="message"><br> 
+          <input type="submit" value="Send message" class="btn btn-primary btn-sm">
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

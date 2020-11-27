@@ -1,0 +1,110 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+    <title>Higher Degree by Research Opportunities</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--note to self: check if this needs to be specified-->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/uwastylesheet.css' %}">
+	<link rel="shortcut icon" type="image/png" href="\static\Images\favicon.png" >
+</head>
+<body>
+	<!--https://getbootstrap.com/docs/4.5/getting-started/introduction/-->
+	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+	
+	<!--jquery (necessary for Bootstrap's Javascrip plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+	
+    <!-- Functions for Base.html -->
+    <script src="\static\js\base.js"></script>
+
+    <!--Advanced search drop down -->
+    <script src="\static\js\advancedSearch.js"></script>
+    
+    <!--Search results sort by -->
+    <script src="\static\js\search_sortBy.js"></script>
+    <!--Search results paginator -->
+     <script src="\static\js\paginator.js"></script>
+    
+
+
+	<!-- Navbar content -->
+	<nav class="navbar navbar-light" style="background-color: #003087;">
+		<!-- UWA logo -->
+    	<a class="navbar-brand" href="#">
+			<img src="\static\Images\UWA_Formal_Landscape_white.png"  max-width: 60% alt="UWA" style="width:75%"></img>
+		</a>
+	</nav>
+
+	<div class="container-fluid">      
+        <nav class="navbar sticky-top navbar-expand-sm navbar-light">   
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#collapse_Navbar"> 
+                <span class="navbar-toggler-icon"></span> 
+
+                
+            </button>  
+            <div class="collapse navbar-collapse" id="collapse_Navbar"> 
+                <ul class="navbar-nav m-auto">
+					<li class="nav-item active">
+						<a href="/home" onclick="resetSS()" class="nav-link">
+							Home
+						</a>
+                    </li>
+                    {% if not request.user.is_authenticated %}
+                    <li class="nav-item">
+						<a href="/login" class="nav-link">
+							Login
+						</a>
+                    </li>
+                    {% endif %}
+                    {% if request.user.is_staff %}
+                    <li class="nav-item">
+						<a href="/admin" class="nav-link">
+							Admin
+						</a>
+                    </li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+					<li class="nav-item">
+						<a href="/addprojectpage" class="nav-link">
+							Add Project
+						</a>
+                    </li>
+                    {% endif %}
+                    {% if object.user == request.user %}
+                    <li class="nav-item">
+						<a href="edit" class="nav-link">
+							Edit Project
+						</a>
+                    </li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link">
+                        Logout
+                        </a>
+                    </li>
+                    {% endif %}
+				</ul>
+
+            </div> 
+
+        </nav> 
+    </div> 
+
+	{% block content-header %}
+	{% endblock %}
+
+    {% block content%}
+    {% endblock %}
+
+</body>
+</html>
